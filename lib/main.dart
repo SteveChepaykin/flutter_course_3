@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_course_3/widgets/red_container.dart';
 
 void main() {
   runApp(const MyApp());
@@ -44,22 +45,27 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Align(
         alignment: Alignment.center,
-        child: Container(
-          child: Text('a Container'),
-          decoration: BoxDecoration(
-            color: Colors.green,
-            border: Border.all(width: 3, color: Colors.blue, strokeAlign: StrokeAlign.outside),
-            borderRadius: BorderRadius.all(Radius.circular(20)),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black,
-                offset: Offset(10, 10),
-                blurRadius: 30,
-              )
-            ],
-          ),
-          margin: EdgeInsets.all(20),
-          padding: EdgeInsets.only(top: 10, right: 20, bottom: 30, left: 40),
+        child: Column(
+          children: [
+            Container(
+              child: Text('a Container'),
+              decoration: BoxDecoration(
+                color: Colors.green,
+                border: Border.all(width: 3, color: Colors.blue, strokeAlign: StrokeAlign.outside),
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black,
+                    offset: Offset(10, 10),
+                    blurRadius: 30,
+                  )
+                ],
+              ),
+              margin: EdgeInsets.all(20),
+              padding: EdgeInsets.only(top: 10, right: 20, bottom: 30, left: 40),
+            ),
+            RedContainer(),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
